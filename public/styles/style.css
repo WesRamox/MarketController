@@ -1,0 +1,23 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(20, 20, 20);
+     color: white;
+}
+
+input {
+     color: black;
+}
+
+.box {
+     display: flex;
+     flex-direction: column;
+}

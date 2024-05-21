@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="./public/styles/style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+       tailwind.config = {
+         theme: {
+           extend: {
+             colors: {
+               clifford: '#da373d',
+             }
+           }
+         }
+       }
+     </script>
+</head>
+<body>
+     <main class="main flex flex-col">
+          <h1 class="text-xl">Sistema para mercado</h1>
+          <form id="form-product" class="flex flex-col rounded gap-3">
+               <div class="box">
+                    <label for="product-name">Nome do Produto</label>
+                    <input type="text" name="product-name" id="product-name" required>
+               </div>
+
+               <div class="box">
+                    <label for="product-brand">Marca do Produto</label>
+                    <input type="text" name="product-brand" id="product-brand" required>
+               </div>
+
+               <div class="box">
+                    <label for="product-entry">Data entrada</label>
+                    <input type="date" name="product-entry" id="product-entry" required>
+               </div>
+
+               <div class="box">
+                    <label for="product-validity">Data Validade</label>
+                    <input type="date" name="product-validity" id="product-validity" required>
+               </div>
+
+               <button type="button" class="sendData p-2 bg-zinc-800 rounded">Adicionar produto</button>
+          </form>
+
+          <div>
+               <h1 class="text-xl">Proximo produto proximo a validade</h1>
+
+               <ul class="next-due-date-list">
+                    <li class="">item 1</li>
+               </ul>
+          </div>
+     </main>
+     <script type="module" src="./src/scripts/app.js"></script>
+</body>
+</html>
