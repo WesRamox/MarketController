@@ -19,40 +19,41 @@
      </script>
 </head>
 <body>
-     <main class="main flex flex-col">
-          <h1 class="text-xl">Sistema para mercado</h1>
+     <main class="main flex flex-col text-zinc-300">
+          <div class="logo flex justify-center items-center pb-10"><img src="./public/images/logo-high.png"></div>
           <form id="form-product" class="flex flex-col rounded gap-3">
-               <div class="box">
+               <div class="box flex flex-col">
                     <label for="product-name">Nome do Produto</label>
-                    <input type="text" name="product-name" id="product-name" required>
+                    <input type="text" name="product-name" class="text-zinc-700 rounded px-2 py-1" id="product-name" required>
                </div>
 
-               <div class="box">
+               <div class="box flex flex-col">
                     <label for="product-brand">Marca do Produto</label>
-                    <input type="text" name="product-brand" id="product-brand" required>
+                    <input type="text" name="product-brand" class="text-zinc-700 rounded px-2 py-1" id="product-brand" required>
                </div>
 
-               <div class="box">
+               <div class="box flex flex-col">
                     <label for="product-entry">Data entrada</label>
-                    <input type="date" name="product-entry" id="product-entry" required>
+                    <input type="date" name="product-entry" class="text-zinc-700 rounded px-2 py-1" id="product-entry" required>
                </div>
 
-               <div class="box">
+               <div class="box flex flex-col">
                     <label for="product-validity">Data Validade</label>
-                    <input type="date" name="product-validity" id="product-validity" required>
+                    <input type="date" name="product-validity" class="text-zinc-700 rounded px-2 py-1" id="product-validity" required>
                </div>
 
                <button type="button" class="sendData p-2 bg-zinc-800 rounded">Adicionar produto</button>
           </form>
 
           <div>
-               <h1 class="text-xl">Proximo produto proximo a validade</h1>
+               <!-- <h1 class="text-xl">Proximo produto proximo a validade</h1> -->
 
                <ul class="next-due-date-list">
-                    <li class="">item 1</li>
                </ul>
           </div>
      </main>
+
+     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
      <script type="module" src="./src/scripts/app.js"></script>
 </body>
 </html>
