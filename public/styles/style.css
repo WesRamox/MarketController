@@ -26,11 +26,3 @@ body {
      align-items: center;
      background-color: var(--bg-color); 
 }
-
-.warning {
-     color: rgb(255, 183, 0);
-}
-
-.critical {
-     color: red;
-}

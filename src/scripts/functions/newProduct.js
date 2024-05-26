@@ -17,7 +17,7 @@ export const newProduct = () => {
           productName,
           productBrand,
           productEntry,
-          productValidity,
+          productValidity: dayjs(productValidity).format("DD/MM/YYYY"),
           daysToDue: returnDays
      };
      
