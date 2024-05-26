@@ -8,18 +8,24 @@ export const newProduct = () => {
 
 
      const listProducts = JSON.parse(localStorage.getItem("products")) || [];
+     const validityDate = dayjs(productValidity)
+     const validityDays = validityDate.diff(dayjs(), 'days', true)
+     const returnDays = Math.round(validityDays)
 
      const newProduct = {
           productId: listProducts.length + 1,
           productName,
           productBrand,
           productEntry,
-          productValidity
+          productValidity,
+          daysToDue: returnDays
      };
+     
 
      listProducts.push(newProduct);
 
      localStorage.setItem("products", JSON.stringify(listProducts));
 
+     console.log(newProduct)
      renderProducts();
 };

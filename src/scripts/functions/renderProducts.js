@@ -7,10 +7,10 @@ export const renderProducts = () => {
           const productElement = document.createElement("li");
           productElement.style.margin = "10px"
 
-          const validityDate = dayjs(product.productValidity)
-          const validityDays = validityDate.diff(dayjs(), 'days', true)
+          // const validityDate = dayjs(product.productValidity)
+          // const validityDays = validityDate.diff(dayjs(), 'days', true)
 
-          const returnDays = Math.round(validityDays)
+          // const returnDays = Math.round(validityDays)
 
           productElement.innerHTML = `product name: ${product.productName} <br> vence em: ${returnDays} dias`
 
