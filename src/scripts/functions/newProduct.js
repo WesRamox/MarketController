@@ -1,4 +1,4 @@
-import { renderProducts } from "./renderProducts.js";
+import { renderDue } from "./renderDue.js";
 
 export const newProduct = () => {
      const productName = document.querySelector("#product-name").value;
@@ -8,24 +8,19 @@ export const newProduct = () => {
 
 
      const listProducts = JSON.parse(localStorage.getItem("products")) || [];
-     const validityDate = dayjs(productValidity)
-     const validityDays = validityDate.diff(dayjs(), 'days', true)
-     const returnDays = Math.round(validityDays)
 
      const newProduct = {
           productId: listProducts.length + 1,
           productName,
           productBrand,
           productEntry,
-          productValidity: dayjs(productValidity).format("DD/MM/YYYY"),
-          daysToDue: returnDays
+          productValidity: dayjs(productValidity)
      };
      
 
      listProducts.push(newProduct);
 
      localStorage.setItem("products", JSON.stringify(listProducts));
-
-     console.log(newProduct)
-     renderProducts();
+     renderDue();
+     renderAll();
 };

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Market Controller | Controle seu mercado aqui!</title>
+     <link rel="stylesheet" href="../public/styles/style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <div class="container flex-col min-h-96 flex w-screen lg:flex-row">
+          <div class="flex">
+               <header class="flex bg-zinc-800 rounded mr-10">
+                    <ul class="flex flex-col items-center text-zinc-400 justify-around p-5">
+                         <li class="hover:text-zinc-500"><button title="Início" class="homeButton text-gray-200"><i class="fa-solid fa-house"></i></button></li>
+                         <li class="hover:text-zinc-500"><button title="Todos os Produtos" class="allProductsButton"><i class="fa-solid fa-list"></i></button></li>
+                         <li class="hover:text-zinc-500"><button title="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                         <li class="hover:text-zinc-500"><button title="Perfil"><i class="fa-solid fa-user"></i></button></li>
+                    </ul>
+               </header>
+               <main class="main flex flex-col w-96 bg-zinc-900 rounded px-10 py-5 text-zinc-300">
+                    <div class="logo flex justify-center items-center pb-10"><img src="../public/images/logo.png"></div>
+                    <form id="form-product" class="flex flex-col rounded gap-3">
+                         <div class="box flex flex-col">
+                              <label for="product-name">Nome do Produto</label>
+                              <input type="text" name="product-name" class="text-zinc-700 placeholder-zinc-400 rounded px-2 py-1" id="product-name" placeholder="Ex: Feijão" required>
+                         </div>
+
+                         <div class="box flex flex-col">
+                              <label for="product-brand">Marca do Produto</label>
+                              <input type="text" name="product-brand" class="text-zinc-700 placeholder-zinc-400 rounded px-2 py-1" id="product-brand" placeholder="Ex: Camil" required>
+                         </div>
+               
+                         <div class="box flex flex-col">
+                              <label for="product-validity">Data Validade</label>
+                              <input type="date" name="product-validity" class="text-zinc-700  rounded px-2 py-1" id="product-validity" required>
+                         </div>
+                         
+                         <div class="box flex flex-col">
+                              <label for="product-entry">Data entrada</label>
+                              <input type="date" name="product-entry" class="text-zinc-800 rounded px-2 py-1" id="product-entry" disabled>
+                         </div>
+
+                         <button type="button" class="sendData p-2 bg-zinc-800 rounded">Adicionar produto</button>
+                    </form>
+               </main>
+          </div>
+          <aside class="home bg-zinc-900 text-zinc-300 rounded w-full flex-col ml-10 flex">
+               <div class="header h-10 bg-zinc-800 flex items-center justify-center p-3">
+                    <h1 class="text-xl cursor-default">Produtos próximos da validade</h1>
+               </div>
+               <div class="next-due-list mt-1 overflow-y-auto rounded h96 flex flex-col p-5 gap-5 items-center">
+               </div> 
+          </aside>
+          <aside class="all-products bg-zinc-900 text-zinc-300 rounded w-full hidden flex-col ml-10 transition ease-in-out">
+               <div class="header h-10 bg-zinc-800 flex items-center justify-center p-3">
+                    <h1 class="text-xl cursor-default">Todos os produtos cadastrados</h1>
+               </div>
+               <div class="all-products-list mt-1 overflow-y-auto rounded h96 flex flex-col p-5 gap-5 items-center">
+               </div> 
+          </aside>
+     </div>
+
+     <script src="https://kit.fontawesome.com/87ae717b84.js" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+     <script type="module" src="../src/scripts/app.js"></script>
+</body>
+</html>

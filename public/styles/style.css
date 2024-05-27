@@ -5,6 +5,15 @@
      --text-color: white;
 }
 
+::-webkit-scrollbar {
+     background-color: rgb(61, 61, 61);
+     width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+     background-color: rgb(28, 28, 28);
+}
+
 * {
      /* border: solid red 1px; */
      margin: 0;     
@@ -21,8 +30,13 @@ textarea:focus, input:focus, select:focus {
 
 body {
      height: 100vh;
+     min-height: 500px;
      display: flex;
      justify-content: center;
      align-items: center;
      background-color: var(--bg-color); 
+}
+
+.h96 {
+     height: 27rem !important;
 }

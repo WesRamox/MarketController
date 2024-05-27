@@ -1,6 +1,8 @@
 
 import { newProduct } from "./functions/newProduct.js";
-import { renderProducts } from "./functions/renderProducts.js"
+import { renderAll } from "./functions/renderAll.js";
+import { renderDue } from "./functions/renderDue.js";
+import "./functions/Navegation.js";
  
 const newProductButton = document.querySelector(".sendData");
 
@@ -22,4 +24,5 @@ window.onload = () => {
    
 }
 
-renderProducts()
+renderDue();
+renderAll();
