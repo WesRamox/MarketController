@@ -1,4 +1,5 @@
 import { renderDue } from "./renderDue.js";
+import { renderAll } from "./renderAll.js";
 
 export const newProduct = () => {
      const productName = document.querySelector("#product-name").value;
@@ -21,6 +22,7 @@ export const newProduct = () => {
      listProducts.push(newProduct);
 
      localStorage.setItem("products", JSON.stringify(listProducts));
-     renderDue();
+     
      renderAll();
+     renderDue();
 };
